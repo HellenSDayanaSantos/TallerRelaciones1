@@ -21,4 +21,9 @@ class Doblaje extends Model
     {
         return $this->hasManyThrough('App\Models\Categoria', 'App\Models\Pelicula');
     }
+
+    public function likes()
+    {
+        return $this->morphMany('App\Models\Like', 'likable');
+    }
 }

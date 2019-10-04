@@ -18,4 +18,9 @@ class Categoria extends Model
     {
         return $this->belongsTo('App\Models\Pelicula');
     }
+
+    public function likes()
+    {
+        return $this->morphMany('App\Models\Like', 'likable');
+    }
 }

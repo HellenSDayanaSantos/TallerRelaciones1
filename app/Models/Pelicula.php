@@ -32,4 +32,9 @@ class Pelicula extends Model
         return $this->belongsToMany('App\Models\Cliente','rentas')->withTimestamps();
     }
 
+    public function likes()
+    {
+        return $this->morphMany('App\Models\Like', 'likable');
+    }
+
 }

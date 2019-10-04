@@ -30,5 +30,16 @@ Route::get('getCategorias', 'DoblajeController@getCategorias');
 Route::get('categoria', 'CategoriaController@index');
 Route::post('categoria', 'CategoriaController@store');
 
+Route::get('doblajelike', 'LikeController@consultarDoblaje');
+Route::post('doblajelike', 'LikeController@guardarDoblaje');
+
+Route::get('categorialike', 'LikeController@consultarCategoria');
+Route::post('categorialike', 'LikeController@guardarCategoria');
+
+Route::get('peliculalike', 'LikeController@consultarPelicula');
+Route::post('peliculalike', 'LikeController@guardarPelicula');
+
+
+
 
 
